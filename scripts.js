@@ -36,7 +36,23 @@ function playRound(humanSelection, computerSelection){
 		console.log("Computer Wins!");
 	}else if(humanSelection=="paper" && computerSelection=="paper"){
 		console.log("It's a tie!");
-	}
+	}else if (humanSelection=="rock" && computerSelection=="scissors"){
+		humanScore++;
+		console.log("Human Wins!");
+	}else if(humanSelection=="rock" && computerSelection=="paper"){
+		computerScore++;
+		console.log("Computer Wins!");
+	}else if(humanSelection=="rock" && computerSelection=="rock"){
+		console.log("It's a tie!");
+    }else if (humanSelection=="scissors" && computerSelection=="paper"){
+		humanScore++;
+		console.log("Human Wins!");
+	}else if(humanSelection=="scissors" && computerSelection=="rock"){
+		computerScore++;
+		console.log("Computer Wins!");
+	}else if(humanSelection=="scissors" && computerSelection=="scissors"){
+		console.log("It's a tie!");
+    }
 }
 
 playRound(humanChoice, computerChoice);
