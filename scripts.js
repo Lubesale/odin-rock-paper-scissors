@@ -23,3 +23,6 @@ function getHumanChoice(){
 
 const humanChoice= getHumanChoice().toLowerCase();
 console.log("You chose " + humanChoice);
+
+let humanScore=0;
+let computerScore=0;
