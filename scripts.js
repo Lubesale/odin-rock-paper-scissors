@@ -16,3 +16,10 @@ function getComputerChoice(){
 const computerChoice = getComputerChoice(randomNumber).toLowerCase();
 
 console.log("The computer chose " + computerChoice);
+
+function getHumanChoice(){
+	return prompt("Choose Rock, Paper or Scissors");
+}
+
+const humanChoice= getHumanChoice().toLowerCase();
+console.log("You chose " + humanChoice);
