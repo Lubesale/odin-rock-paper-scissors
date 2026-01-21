@@ -26,3 +26,19 @@ console.log("You chose " + humanChoice);
 
 let humanScore=0;
 let computerScore=0;
+
+function playRound(humanSelection, computerSelection){
+	if (humanSelection=="paper" && computerSelection=="rock"){
+		humanScore++;
+		console.log("Human Wins!");
+	}else if(humanSelection=="paper" && computerSelection=="scissors"){
+		computerScore++;
+		console.log("Computer Wins!");
+	}else if(humanSelection=="paper" && computerSelection=="paper"){
+		console.log("It's a tie!");
+	}
+}
+
+playRound(humanChoice, computerChoice);
+console.log("Human: " + humanScore + " points.");
+console.log("Computer: " + computerScore + " points.");
