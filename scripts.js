@@ -1,4 +1,4 @@
-console.log("Hello from JavaScript");
+//console.log("Hello from JavaScript");
 
 let randomNumber=Math.floor(Math.random()*3);
 
@@ -56,40 +56,42 @@ function playGame(){
         }
     }
 
-    playRound(humanChoice, computerChoice);
     computerChoice = getComputerChoice(randomNumber).toLowerCase();
     console.log("The computer chose " + computerChoice);
 
     humanChoice= getHumanChoice().toLowerCase();
     console.log("You chose " + humanChoice);
-
     playRound(humanChoice, computerChoice);
-    computerChoice = getComputerChoice(randomNumber).toLowerCase();
-    console.log("The computer chose " + computerChoice);
-    
-    humanChoice= getHumanChoice().toLowerCase();
-    console.log("You chose " + humanChoice);
 
-    playRound(humanChoice, computerChoice);
     computerChoice = getComputerChoice(randomNumber).toLowerCase();
     console.log("The computer chose " + computerChoice);
     
     humanChoice= getHumanChoice().toLowerCase();
     console.log("You chose " + humanChoice);
-
     playRound(humanChoice, computerChoice);
+
     computerChoice = getComputerChoice(randomNumber).toLowerCase();
     console.log("The computer chose " + computerChoice);
     
     humanChoice= getHumanChoice().toLowerCase();
     console.log("You chose " + humanChoice);
-
     playRound(humanChoice, computerChoice);
+
     computerChoice = getComputerChoice(randomNumber).toLowerCase();
     console.log("The computer chose " + computerChoice);
     
     humanChoice= getHumanChoice().toLowerCase();
     console.log("You chose " + humanChoice);
+    playRound(humanChoice, computerChoice);
+
+    computerChoice = getComputerChoice(randomNumber).toLowerCase();
+    console.log("The computer chose " + computerChoice);
+    
+    humanChoice= getHumanChoice().toLowerCase();
+    console.log("You chose " + humanChoice);
+    
+    playRound(humanChoice, computerChoice);
+
 
     console.log("Human: " + humanScore + " points.");
     console.log("Computer: " + computerScore + " points.");
