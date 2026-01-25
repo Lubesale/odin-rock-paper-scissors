@@ -1,5 +1,3 @@
-//console.log("Hello from JavaScript");
-
 let randomNumber=Math.floor(Math.random()*3);
 
 function getComputerChoice(){
@@ -13,15 +11,13 @@ function getComputerChoice(){
 	}
 }
 
-let computerChoice; //= getComputerChoice(randomNumber).toLowerCase();
-//console.log("The computer chose " + computerChoice);
+let computerChoice; 
 
 function getHumanChoice(){
 	return prompt("Choose Rock, Paper or Scissors");
 }
 
-let humanChoice; //= getHumanChoice().toLowerCase();
-//console.log("You chose " + humanChoice);
+let humanChoice;
 
 function playGame(){
 
@@ -56,42 +52,14 @@ function playGame(){
         }
     }
 
-    computerChoice = getComputerChoice(randomNumber).toLowerCase();
-    console.log("The computer chose " + computerChoice);
+    for(let i=0; i<5; i++){
+        computerChoice = getComputerChoice(randomNumber).toLowerCase();
+        console.log("The computer chose " + computerChoice);
 
-    humanChoice= getHumanChoice().toLowerCase();
-    console.log("You chose " + humanChoice);
-    playRound(humanChoice, computerChoice);
-
-    computerChoice = getComputerChoice(randomNumber).toLowerCase();
-    console.log("The computer chose " + computerChoice);
-    
-    humanChoice= getHumanChoice().toLowerCase();
-    console.log("You chose " + humanChoice);
-    playRound(humanChoice, computerChoice);
-
-    computerChoice = getComputerChoice(randomNumber).toLowerCase();
-    console.log("The computer chose " + computerChoice);
-    
-    humanChoice= getHumanChoice().toLowerCase();
-    console.log("You chose " + humanChoice);
-    playRound(humanChoice, computerChoice);
-
-    computerChoice = getComputerChoice(randomNumber).toLowerCase();
-    console.log("The computer chose " + computerChoice);
-    
-    humanChoice= getHumanChoice().toLowerCase();
-    console.log("You chose " + humanChoice);
-    playRound(humanChoice, computerChoice);
-
-    computerChoice = getComputerChoice(randomNumber).toLowerCase();
-    console.log("The computer chose " + computerChoice);
-    
-    humanChoice= getHumanChoice().toLowerCase();
-    console.log("You chose " + humanChoice);
-    
-    playRound(humanChoice, computerChoice);
-
+        humanChoice= getHumanChoice().toLowerCase();
+        console.log("You chose " + humanChoice);
+        playRound(humanChoice, computerChoice);
+    }
 
     console.log("Human: " + humanScore + " points.");
     console.log("Computer: " + computerScore + " points.");
