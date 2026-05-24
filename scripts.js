@@ -14,56 +14,78 @@ function getComputerChoice(randomNumber){
 let humanScore=0;
 let computerScore=0;
 
+const resultsMessage = document.querySelector('.round-results');
+const message = document.createElement('h3');
+resultsMessage.appendChild(message);
+
+
+
+
 //Function to play a round of rock, paper, scissors and log keep score
 function playRound(humanSelection, computerSelection){
 	if (humanSelection=="paper" && computerSelection=="rock"){
 		humanScore++;
-		console.log("Human Wins!");
+		message.textContent = "Human Wins!!";
 	}else if(humanSelection=="paper" && computerSelection=="scissors"){
 	    computerScore++;
-	    console.log("Computer Wins!");
+	    message.textContent = "Computer Wins!";
 	}else if(humanSelection=="paper" && computerSelection=="paper"){
-	    console.log("It's a tie!");
+	    message.textContent = "It's a tie!";
 	}else if (humanSelection=="rock" && computerSelection=="scissors"){
 	    humanScore++;
-	    console.log("Human Wins!");
+	    message.textContent = "Human Wins!!";
 	}else if(humanSelection=="rock" && computerSelection=="paper"){
 	    computerScore++;
-	    console.log("Computer Wins!");
+	    message.textContent = "Computer Wins!";
 	}else if(humanSelection=="rock" && computerSelection=="rock"){
-	    console.log("It's a tie!");
+	    message.textContent = "It's a tie!";
     }else if (humanSelection=="scissors" && computerSelection=="paper"){
 	    humanScore++;
-	    console.log("Human Wins!");
+	    message.textContent = "Human Wins!!";
 	}else if(humanSelection=="scissors" && computerSelection=="rock"){
 	    computerScore++;
-	    console.log("Computer Wins!");
+	    message.textContent = "Computer Wins!";
 	}else if(humanSelection=="scissors" && computerSelection=="scissors"){
-	    console.log("It's a tie!");
+	    message.textContent = "It's a tie!";
     }
 }
+
+//Adds score to scoreboard initialized at 0
+const scoreBoard = document.querySelector('.score');
+const scoreList = document.createElement('ul');
+
+const humanList = document.createElement('li');
+humanList.textContent = "Human: " + humanScore + " points.";
+scoreList.appendChild(humanList);
+
+const computerList = document.createElement('li');
+computerList.textContent = "Computer: " + computerScore + " points.";
+scoreList.appendChild(computerList);
+
+scoreBoard.appendChild(scoreList);
 
 //Each button plays a round and logs the winner and the current score
 //Math.floor(Math.random()*3) makes sure the number is 1, 2 or 3 and always integer
 const buttonRock = document.querySelector('#rock');
 buttonRock.addEventListener('click', () => {
 	playRound('rock', getComputerChoice(Math.floor(Math.random()*3)).toLowerCase());
-	console.log("Human: " + humanScore + " points.");
-	console.log("Computer: " + computerScore + " points.");
+	humanList.textContent = "Human: " + humanScore + " points.";
+	computerList.textContent = "Computer: " + computerScore + " points.";
 });
 
 const buttonPaper = document.querySelector('#paper');
 buttonPaper.addEventListener('click', () => {
 	playRound('paper', getComputerChoice(Math.floor(Math.random()*3)).toLowerCase());
-	console.log("Human: " + humanScore + " points.");
-	console.log("Computer: " + computerScore + " points.");
+	humanList.textContent = "Human: " + humanScore + " points.";
+	computerList.textContent = "Computer: " + computerScore + " points.";
 });
 
 const buttonScissors = document.querySelector('#scissors');
 buttonScissors.addEventListener('click', () => {
 	playRound('scissors', getComputerChoice(Math.floor(Math.random()*3)).toLowerCase());
-	console.log("Human: " + humanScore + " points.");
-	console.log("Computer: " + computerScore + " points.");
+	humanList.textContent = "Human: " + humanScore + " points.";
+	computerList.textContent = "Computer: " + computerScore + " points.";
 });
 
-const scoreBoard = document.querySelector('.score');
+
+
