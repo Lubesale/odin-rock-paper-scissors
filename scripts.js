@@ -48,6 +48,16 @@ function playRound(humanSelection, computerSelection){
 	}else if(humanSelection=="scissors" && computerSelection=="scissors"){
 	    message.textContent = "It's a tie!";
     }
+
+	if (humanScore===5){
+		humanScore=0;
+		computerScore=0;
+		return alert ('HUMAN WINS THE GAME!!\nSTART AGAIN AND KEEP PLAYING!!');
+	}else if(computerScore===5){
+		computerScore=0;
+		humanScore=0;
+		return alert('COMPUTER WINS THE GAME!!\nSTART AGAIN AND KEEP PLAYING!!');
+	}
 }
 
 //Adds score to scoreboard initialized at 0
