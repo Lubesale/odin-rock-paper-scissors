@@ -1,3 +1,54 @@
+html{
+    background-image: url(images/background.jpg);
+    background-size: 100vw 100vh;
+}
+
 button{
-    
+    border: solid black;
+    border-radius: 25px;
+    /* margin: 20px; */
+    height: 200px;
+    width: 250px;
+    font-size: 50px;
+    flex-grow: 1;
+}
+
+button:active {
+    background-color: rgba(255, 255, 255, 0.699);
+    transform: scale(0.97);
+}
+
+button:hover{
+    background-color: rgba(255, 255, 255, 0.719);
+    cursor: pointer;
+}
+
+div{
+    /* border: solid black; */
+    margin-bottom: 15px;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.round-results{
+    border: solid black;
+    background-color: rgb(235, 235, 213, 0.7) ;
+    text-align: center;
+    font-size: 30px;
+
+}
+
+.score{
+    border: solid black;
+    background-color: rgb(235, 235, 213, 0.7) ;
+    text-align: center;
+    font-size: 25px;
+}
+
+li{
+    list-style: none;
 }

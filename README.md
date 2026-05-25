@@ -1,0 +1,1 @@
+Background image by Darina Belonogova, from pexels.com - Foto de Darina Belonogova de Pexels: https://www.pexels.com/es-es/foto/tijeras-de-plata-sobre-piedras-8789746/
